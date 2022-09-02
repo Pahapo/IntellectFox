@@ -37,12 +37,18 @@ h4, input {
 }
 
 h5 {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 17.58px;
+}
+
+h6 {
   font-size: 14px;
   font-weight: 400;
   line-height: 16.41px;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
@@ -61,6 +67,7 @@ button, input {
 .container {
   max-width: 1232px;
   margin: 120px auto;
+  padding: 0 20px;
 }
 
 .header {
@@ -77,8 +84,8 @@ button, input {
   justify-content: space-between;
 
   max-width: 1232px;
-  padding-top: 51px;
-  margin: 0 auto 145px auto;
+  padding: 51px 20px 0 20px;
+  margin: 0 auto 120px auto;
 }
 
 .logo {
@@ -115,6 +122,10 @@ button, input {
   width: 40px;
 }
 
+.nav-item:nth-child(5) {
+  display: none;
+}
+
 .nav-item:nth-child(1) {
   position: relative;
   display: flex;
@@ -144,8 +155,16 @@ button, input {
   color: #fff;
 }
 
+input::placeholder {
+  color: #383838;
+}
+
 .page-search {
   margin-bottom: 120px;
+}
+
+.page-search-mobile {
+  display: none;
 }
 
 .search-block {
@@ -156,17 +175,28 @@ button, input {
   border-radius: 8px;
 }
 
+.search-title {
+  display: flex;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+.search-title h4:first-child {
+  margin: 0 100px 0 24px;
+}
+
 .search {
   display: flex;
   width: 100%;
 }
 
-.serch-btn {
+.search-btn input {
+  height: 100%;
   padding: 20px 57px;
   color: #fff;
   font-weight: 500;
   background-color: #3077C6;
-  border-radius: 8px;
+  border-radius: 0 8px;
 }
 
 .search input {
@@ -177,7 +207,14 @@ button, input {
 }
 
 .search input:nth-child(2) {
+  position: relative;
   border: 3px solid rgba(245, 189, 65, 1);
+}
+
+.search input:nth-child(2)::before {
+  position: absolute;
+  content: 'Check-in — Check-out';
+  top: -40px;
 }
 
 .page-adv {
@@ -206,7 +243,7 @@ button, input {
   background-color: #F5BD41;
 }
 
-.advantages-items, .homes-items, .destinations-items, .hostel-items, .footer-items {
+.advantages-items, .homes-items, .destinations-items, .hostel-items, .signup-mobile, .footer-items, .footer-mobile-items {
   display: flex;
   justify-content: space-between;
 }
@@ -337,6 +374,10 @@ button, input {
   background-color: #EAF0F9;
 }
 
+.signup-block-mobile {
+  display: none;
+}
+
 .close::before, .close::after {
   position: absolute;
   content: '';
@@ -344,7 +385,7 @@ button, input {
   top: 37px;
   right: 24px;
   height: 1px;
-  width: 18.38px;
+  width: 36.76px;
   background-color: #BFBFBF;
 }
 
@@ -371,6 +412,10 @@ button, input {
   border: 1px solid #3077C6;
   border-radius: 8px;
   padding: 12px 32px;
+}
+
+.hostel .container {
+  padding: 0;
 }
 
 .hostel-items .btn-next {
@@ -468,9 +513,13 @@ button, input {
   margin-top: 22px;
 }
 
-footer {
+.footer {
   padding: 120px 104px;
   background-color: #10367C;
+}
+
+.footer-mobile {
+  display: none;
 }
 
 .footer-item {
@@ -490,7 +539,7 @@ footer {
   color: #fff;
 }
 
-.copyright h5 {
+.copyright h6 {
   color: #fff;
   margin-top: 64px;
 }
@@ -498,7 +547,320 @@ footer {
 /* For mobile */
 
 @media (max-width:450px) {
-  .info-block_a {
-    width: calc(50% - 6px);
+  h1{
+    font-size: 28px;
+    line-height: 32.81px;
+  }
+  h2 {
+    font-size: 15px;
+    line-height: 17.58px;
+  }
+  h3 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.41px;
+  }
+  h4 {
+    font-size: 15px;
+    line-height: 17.58px;
+  }
+  h5 {
+    font-size: 15px;
+    line-height: 17.58px;
+  }
+  h6 {
+    font-size: 12px;
+    line-height: 14.06px;
+  }
+  .container {
+    max-width: 328px;
+    margin: 40px auto;
+    padding: 0;
+  }
+  .header-nav {
+    max-width: 328px;
+    padding: 12px 0 0 0;
+  }
+  .header-nav .logo img {
+    width: 122px;
+  }
+  .nav-items .nav-item:first-child, .nav-items .nav-item:nth-child(2) {
+    display: none;
+  }
+  .nav-item:nth-child(3) img {
+    width: 16px;
+  }
+  .nav-item:nth-child(4) img {
+    width: 24px;
+  }
+  .nav-item:nth-child(5) {
+    display: block;
+  }
+  .page-text p {
+    font-size: 30px;
+    line-height: 35.16px;
+  }
+  .page-search {
+    display: none;
+  }
+  .page-search-mobile {
+    display: grid;
+    grid-template-columns: 152px 152px;
+    gap: 8px;
+
+    grid-template-areas:
+    "A A"
+    "B C"
+    "D D"
+    "E E";
+
+    padding: 8px;
+    margin: calc((100vh - 470px) / 2) 0;
+    background-color: #f5bd41;
+  }
+  .search-block-1 {
+    grid-area: A;
+  }
+  .search-block-2 {
+    grid-area: B;
+  }
+  .search-block-3 {
+    grid-area: C;
+  }
+  .search-block-4 {
+    grid-area: D;
+  }
+  .search-btn-mobile {
+    grid-area: E;
+  }
+  .search-mobile {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 6px 0 6px 8px;
+  }
+  .search-block-4 .search-mobile {
+    display: flex;
+  }
+  .search-mini-block {
+    position: relative;
+  }
+  .search-mini-block:nth-child(n+2)::before {
+    position: absolute;
+    content: '';
+
+    left: -8px;
+    height: 100%;
+    width: 1px;
+    background-color: #BFBFBF;
+  }
+  .search-mobile p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.06px;
+    margin: 0 0 4px 0;
+  }
+  .search-mobile input {
+    width: 100%;
+  }
+  .search-mobile input::placeholder {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  .search-block-1 .search-mobile {
+    display: flex;
+    align-items: center;
+  }
+  .search-block-1 .search-mobile img {
+    margin-left: 6px;
+  }
+  .search-block-1 .search-mobile input {
+    padding: 9px 0 9px 8px;
+  }
+  .search-btn-mobile input {
+    width: 100%;
+    padding: 14px 124px;
+    color: #fff;
+    background-color: #3077C6;
+    border-radius: 4px;
+
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+  .header-page {
+    height: calc(100vh - 131px);
+  }
+  .page-text{
+    margin-bottom: 0;
+  }
+  .header-nav {
+    margin-bottom: 52px;
+  }
+  .advantages-title {
+    margin: 0;
+  }
+  .advantages-title::before {
+    display: none;
+  }
+  .advantages-items {
+    display: block;
+  }
+  .advantages-item {
+    margin: 35px auto 0 auto;
+    width: 214px;
+  }
+  .new-container {
+    padding: 40px 0;
+  }
+  .title {
+    margin-bottom: 32px;
+  }
+  .homes-items .btn-next {
+    right: -14px;
+    top: 64px;
+  }
+  .destinations-items .btn-next {
+    right: -320px;
+    top: 64px;
+    transform: rotate(0);
+  }
+  .homes-item:nth-child(n+4), .destinations-item:nth-child(n+4), 
+  .hostel-item:first-child, .hostel-item:nth-child(n+3) {
+    display: none;
+  }
+  .homes-item, .destinations-item {
+    width: 156px;
+  }
+  .homes-img, .destinations-img {
+    height: 155px;
+  }
+  .homes-text, .destinations-text {
+    margin-top: 8px;
+  }
+  .homes-text h2, .homes-location h2, .destinations-text h2 {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+  .homes-location {
+    margin-top: 4px;
+  }
+  .btn-next {
+    width: 28px;
+  }
+  .destinations-tabs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    background-color: transparent;
+  }
+  .destinations-tab {
+    border: 1px solid #F3F3F4;
+    border-radius: 4px;
+    padding: 5px 15px;
+  }
+  .destinations-about {
+    display: none;
+  }
+  .destinations-item:nth-child(2) .destinations-img {
+    filter: brightness(1);
+  }
+  .signup-block {
+    display: none;
+  }
+  .hostel {
+    background-color: #EAF0F9;
+  }
+  .hostel .title {
+    padding-top: 40px;
+  }
+  .hostel-items .btn-next {
+    display: none;
+  }
+  .hostel-item {
+    width: 327px;
+  }
+  .hostel-price .price {
+    display: none;
+  }
+  .hostel-img {
+    width: 100%;
+  }
+  .hostel-info {
+    padding: 12px 0 0 0;
+    height: 301px;
+  }
+  .about-location {
+    margin-top: 8px;
+  }
+  .score-star {
+    font-size: 15px;
+    line-height: 20.43px;
+  }
+  .score-reviews {
+    margin-top: 4.76px;
+  }
+  .hostel-person {
+    margin-top: 16px;
+  }
+  .person-location {
+    margin-top: 4px;
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+  }
+  .circle {
+    height: 8px;
+    width: 8px;
+    border: 1px solid #333333;
+    border-radius: 50%;
+    margin: 0 4px;
+  }
+  .circle-black {
+    background-color: #333333;
+  }
+  .signup-block-mobile {
+    display: block;
+  }
+  .signup-mobile {
+    position: relative;
+    padding-left: 32px;
+    align-items: center;
+  }
+  .signup-mobile-logo {
+    padding: 24px 6px;
+    background-color: #3077C6;
+    border-radius: 4px;
+  }
+  .signup-mobile-btn h3 {
+    color: #3077C6;
+  }
+  .signup-mobile .close::before, .signup-mobile .close::after {
+    left: 0;
+
+    height: 1px;
+    width: 22.6px;
+  }
+  .footer {
+    display: none;
+  }
+  .footer-mobile {
+    text-align: center;
+    display: block;
+    padding: 40px 49px;
+    background-color: #10367C;
+  }
+  .footer-mobile-items {
+    margin: 40px 0 32px 0;
+  }
+  .footer-mobile-item h4 {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+  .copyright {
   }
 }

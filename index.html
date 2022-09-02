@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>TripHouse</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- for mobile -->
         <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -23,6 +24,7 @@
                         <li class="nav-item"><a href="#"><h2>Attractions</h2></a></li>
                         <li class="nav-item"><img src="img/night.png" alt="day/night"></li>
                         <li class="nav-item"><img src="img/account.png" alt="account"></li>
+                        <li class="nav-item"><img src="img/menu.png" alt="menu"></li>
                     </ul>
                 </div>
                 <div class="container">
@@ -31,16 +33,59 @@
                             <p>Discover stays<br>to live, work or just relax</p>
                         </div>
                         <div class="page-search">
-                            <div class="search-title"></div>
+                            <div class="search-title">
+                                <h4>Your destination or hotel name</h4>
+                                <h4>Check-in — Check-out</h4>
+                            </div>
                             <div class="search-block">
                                 <div class="search">
                                     <input type="text" placeholder="New York">
                                     <input type="text" placeholder="Tue 15 Sept — Sat 19 Sept">
                                     <input type="text" placeholder="2 Adults — 0 Children — 1 Room">
                                 </div>
-                                <div class="serch-btn">
-                                    <h2>Search</h2>
+                                <div class="search-btn">
+                                    <input type="button" value="Search">
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="page-search-mobile">
+                            <div class="search-block-1">
+                                <div class="search-mobile">
+                                    <img src="img/search.png" alt="search">
+                                    <h5><input type="text" placeholder="Your destination or hotel name"></h5>
+                                </div>
+                            </div>
+                            <div class="search-block-2">
+                                <div class="search-mobile">
+                                    <p>Check-in date</p>
+                                    <h5><input type="text" placeholder="Tue 15 Sept 2020"></h5>
+                                </div>
+                            </div>
+                            <div class="search-block-3">
+                                <div class="search-mobile">
+                                    <p>Check-out date</p>
+                                    <h5><input type="text" placeholder="Sat 19 Sept 2020"></h5>
+                                </div>
+                            </div>
+                            <div class="search-block-4">
+                                <div class="search-mobile">
+                                    <div class="search-mini-block">
+                                        <p>Adults</p>
+                                        <h5><input type="number" placeholder="2"></h5>
+                                    </div>
+                                    <div class="search-mini-block">
+                                        <p>Children</p>
+                                        <h5><input type="number" placeholder="0"></h5>
+                                    </div>
+                                    <div class="search-mini-block">
+                                        <p>Rooms</p>
+                                        <h5><input type="number" placeholder="1"></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-btn-mobile">
+                                <input type="button" value="Search">
                             </div>
                         </div>
                         <div class="page-adv">
@@ -51,7 +96,7 @@
                 </div>
             </header>
 
-            <main>
+             <main>
                 <div class="advantages">
                     <div class="container">
                         <div class="advantages-title">
@@ -186,219 +231,266 @@
                     </div>
                 </div>
 
-                <div class="container">
-                    <div class="new-container2">
-                        <div class="signup">
-                            <div class="close"></div>
-                            <div class="signup-img">
-                                <img src="img/user.png" alt="user">
-                            </div>
-                            <div class="signup-content">
-                                <div class="content-text">
-                                    <h2>Sign up and get 20% off your first booking</h2>
+                <div class="signup-block">
+                    <div class="container">
+                        <div class="new-container2">
+                            <div class="signup">
+                                <div class="close"></div>
+                                <div class="signup-img">
+                                    <img src="img/user.png" alt="user">
                                 </div>
-                                <div class="content-ntn">
-                                    <h4>Sign up</h4>
+                                <div class="signup-content">
+                                    <div class="content-text">
+                                        <h2>Sign up and get 20% off your first booking</h2>
+                                    </div>
+                                    <div class="content-ntn">
+                                        <h4>Sign up</h4>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="container">
-                    <div class="title">
-                        <h1>Guests reviews</h1>
+                <div class="hostel">
+                    <div class="container">
+                        <div class="title">
+                            <h1>Guests reviews</h1>
+                        </div>
+                        <div class="hostel-items">
+                            <img class="btn-next" src="img/arrow.png" alt="">
+                            <div class="hostel-item">
+                                <div class="hostel-price">
+                                    <img class="hostel-img" src="img/hostel1.png">
+                                    <div class="price">
+                                        <h4>From <span>250 USD</span></h4>
+                                    </div>
+                                </div>
+                                <div class="hostel-info">
+                                    <div class="hostel-about">
+                                        <div class="about-text">
+                                            <div class="about-name"><h4>Ubud Bali Resort&SPA</h4></div>
+                                            <div class="about-location"><h4>Bali, Indonesia</h4></div>
+                                        </div>
+                                        <div class="about-score">
+                                            <div class="score-star">9,4</div>
+                                            <div class="score-reviews"><h6>1324 reviews</h6></div>
+                                        </div>
+                                    </div>
+                                    <div class="hostel-person">
+                                        <div class="person-icon">
+                                            <img src="img/person.png" alt="person">
+                                        </div>
+                                        <div class="person-data">
+                                            <div class="person-name">
+                                                <h4>Hanna Ivanova</h4>
+                                            </div>
+                                            <div class="person-location">
+                                                <div class="location-icon">
+                                                    <img src="img/ukraine.png" alt="location">
+                                                </div>
+                                                <div class="location-name">
+                                                    <h4>Ukraine</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hostel-review">
+                                        <h4>Great location, really pleasant and clean rooms, but the thing that makes this such a good place to stay are the staff. 
+                                            All of the people are incredibly helpful and generous with their time and advice.</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hostel-item">
+                                <div class="hostel-price">
+                                    <img class="hostel-img" src="img/hostel2.png">
+                                    <div class="price">
+                                        <h4>From <span>40 USD</span></h4>
+                                    </div>
+                                </div>
+                                <div class="hostel-info">
+                                    <div class="hostel-about">
+                                        <div class="about-text">
+                                            <div class="about-name"><h4>King Kong Hostel</h4></div>
+                                            <div class="about-location"><h4>Rotterdam, Netherlands</h4></div>
+                                        </div>
+                                        <div class="about-score">
+                                            <div class="score-star">8,9</div>
+                                            <div class="score-reviews"><h6>2016 reviews</h6></div>
+                                        </div>
+                                    </div>
+                                    <div class="hostel-person">
+                                        <div class="person-icon">
+                                            <img src="img/person.png" alt="person">
+                                        </div>
+                                        <div class="person-data">
+                                            <div class="person-name">
+                                                <h4>Adam Smith</h4>
+                                            </div>
+                                            <div class="person-location">
+                                                <div class="location-icon">
+                                                    <img src="img/usa.png" alt="location">
+                                                </div>
+                                                <div class="location-name">
+                                                    <h4>USA</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hostel-review">
+                                        <h4>I've been in this hostel for a month and here is the best hostel of all.
+                                            Excellent management of excellent and ethical staff and bedrooms Bathrooms are always clean and excellent.
+                                            Most importantly, those who work here are kind and good-natured.</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hostel-item">
+                                <div class="hostel-price">
+                                    <img class="hostel-img" src="img/hostel3.png">
+                                    <div class="price">
+                                        <h4>From <span>100 USD</span></h4>
+                                    </div>
+                                </div>
+                                <div class="hostel-info">
+                                    <div class="hostel-about">
+                                        <div class="about-text">
+                                            <div class="about-name"><h4>Rokoko Hotel</h4></div>
+                                            <div class="about-location"><h4>Ourika, Marocco</h4></div>
+                                        </div>
+                                        <div class="about-score">
+                                            <div class="score-star">9,1</div>
+                                            <div class="score-reviews"><h6>815 reviews</h6></div>
+                                        </div>
+                                    </div>
+                                    <div class="hostel-person">
+                                        <div class="person-icon">
+                                            <img src="img/person.png" alt="person">
+                                        </div>
+                                        <div class="person-data">
+                                            <div class="person-name">
+                                                <h4>Anika Messer</h4>
+                                            </div>
+                                            <div class="person-location">
+                                                <div class="location-icon">
+                                                    <img src="img/germany.png" alt="location">
+                                                </div>
+                                                <div class="location-name">
+                                                    <h4>Germany</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hostel-review">
+                                        <h4>Efficient, friendly, professional, and appropriately attentive. Great hotel in a great location. 
+                                            Easy access to all the surrounding historical sites. Staff is fantastic. 
+                                            Will definitely stay at this location during my next stay in Marocco.</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination">
+                            <div class="circle circle-black"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
                     </div>
-                    <div class="hostel-items">
-                        <img class="btn-next" src="img/arrow.png" alt="">
-                        <div class="hostel-item">
-                            <div class="hostel-price">
-                                <img class="hostel-img" src="img/hostel1.png">
-                                <div class="price">
-                                    <h4>From <span>250 USD</span></h4>
-                                </div>
+                </div>
+
+                <div class="signup-block-mobile">
+                    <div class="container">
+                        <div class="signup-mobile">
+                            <div class="close"></div>
+                            <div class="signup-mobile-logo">
+                                <img src="img/logo_white_mini.png" alt="logo">
                             </div>
-                            <div class="hostel-info">
-                                <div class="hostel-about">
-                                    <div class="about-text">
-                                        <div class="about-name"><h4>Ubud Bali Resort&SPA</h4></div>
-                                        <div class="about-location"><h4>Bali, Indonesia</h4></div>
-                                    </div>
-                                    <div class="about-score">
-                                        <div class="score-star">9,4</div>
-                                        <div class="score-reviews"><h5>1324 reviews</h5></div>
-                                    </div>
-                                </div>
-                                <div class="hostel-person">
-                                    <div class="person-icon">
-                                        <img src="img/person.png" alt="person">
-                                    </div>
-                                    <div class="person-data">
-                                        <div class="person-name">
-                                            <h4>Hanna Ivanova</h4>
-                                        </div>
-                                        <div class="person-location">
-                                            <div class="location-icon">
-                                                <img src="img/ukraine.png" alt="location">
-                                            </div>
-                                            <div class="location-name">
-                                                <h4>Ukraine</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="hostel-review">
-                                    <h4>Great location, really pleasant and clean rooms, but the thing that makes this such a good place to stay are the staff. 
-                                        All of the people are incredibly helpful and generous with their time and advice.</h4>
-                                </div>
+                            <div class="signup-mobile-text">
+                                <h6>Sign up in the app and get 20%<br> off your first booking</h6>
                             </div>
-                        </div>
-                        <div class="hostel-item">
-                            <div class="hostel-price">
-                                <img class="hostel-img" src="img/hostel2.png">
-                                <div class="price">
-                                    <h4>From <span>40 USD</span></h4>
-                                </div>
-                            </div>
-                            <div class="hostel-info">
-                                <div class="hostel-about">
-                                    <div class="about-text">
-                                        <div class="about-name"><h4>King Kong Hostel</h4></div>
-                                        <div class="about-location"><h4>Rotterdam, Netherlands</h4></div>
-                                    </div>
-                                    <div class="about-score">
-                                        <div class="score-star">8,9</div>
-                                        <div class="score-reviews"><h5>2016 reviews</h5></div>
-                                    </div>
-                                </div>
-                                <div class="hostel-person">
-                                    <div class="person-icon">
-                                        <img src="img/person.png" alt="person">
-                                    </div>
-                                    <div class="person-data">
-                                        <div class="person-name">
-                                            <h4>Adam Smith</h4>
-                                        </div>
-                                        <div class="person-location">
-                                            <div class="location-icon">
-                                                <img src="img/usa.png" alt="location">
-                                            </div>
-                                            <div class="location-name">
-                                                <h4>USA</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="hostel-review">
-                                    <h4>I've been in this hostel for a month and here is the best hostel of all.
-                                        Excellent management of excellent and ethical staff and bedrooms Bathrooms are always clean and excellent.
-                                        Most importantly, those who work here are kind and good-natured.</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hostel-item">
-                            <div class="hostel-price">
-                                <img class="hostel-img" src="img/hostel3.png">
-                                <div class="price">
-                                    <h4>From <span>100 USD</span></h4>
-                                </div>
-                            </div>
-                            <div class="hostel-info">
-                                <div class="hostel-about">
-                                    <div class="about-text">
-                                        <div class="about-name"><h4>Rokoko Hotel</h4></div>
-                                        <div class="about-location"><h4>Ourika, Marocco</h4></div>
-                                    </div>
-                                    <div class="about-score">
-                                        <div class="score-star">9,1</div>
-                                        <div class="score-reviews"><h5>815 reviews</h5></div>
-                                    </div>
-                                </div>
-                                <div class="hostel-person">
-                                    <div class="person-icon">
-                                        <img src="img/person.png" alt="person">
-                                    </div>
-                                    <div class="person-data">
-                                        <div class="person-name">
-                                            <h4>Anika Messer</h4>
-                                        </div>
-                                        <div class="person-location">
-                                            <div class="location-icon">
-                                                <img src="img/germany.png" alt="location">
-                                            </div>
-                                            <div class="location-name">
-                                                <h4>Germany</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="hostel-review">
-                                    <h4>Efficient, friendly, professional, and appropriately attentive. Great hotel in a great location. 
-                                        Easy access to all the surrounding historical sites. Staff is fantastic. 
-                                        Will definitely stay at this location during my next stay in Marocco.</h4>
-                                </div>
+                            <div class="signup-mobile-btn">
+                                <h3>Install</h3>
                             </div>
                         </div>
                     </div>
                 </div>
             </main>
 
-            <footer class="footer">
-                <div class="footer-items">
-                    <div class="footer-item">
-                        <div class="footer-title">
-                            <h3>About</h3>
+            <footer>
+                <div class="footer">
+                    <div class="footer-items">
+                        <div class="footer-item">
+                            <div class="footer-title">
+                                <h3>About</h3>
+                            </div>
+                            <div class="footer-text">
+                                <a href="#"><h3>How Triphouse works</h3></a>
+                            </div>
+                            <div class="footer-text">
+                                <a href="#"><h3>Careers</h3></a>
+                            </div>
+                            <div class="footer-text">
+                                <a href="#"><h3>Privacy</h3></a>
+                            </div>
+                            <div class="footer-text">
+                                <a href="#"><h3>Terms</h3></a>
+                            </div>
                         </div>
-                        <div class="footer-text">
-                            <a href="#"><h3>How Triphouse works</h3></a>
+                        <div class="footer-item">
+                            <div class="footer-title">
+                                <h3>Property types</h3>
+                            </div>
+                            <div class="footer-text">
+                                <a href="#"><h3>Guest houses</h3></a>
+                            </div>
+                            <div class="footer-text">
+                                <a href="#"><h3>Hotels</h3></a>
+                            </div>
+                            <div class="footer-text">
+                                <a href="#"><h3>Apartments</h3></a>
+                            </div>
+                            <div class="footer-text">
+                                <a href="#"><h3>Villas</h3></a>
+                            </div>
+                            <div class="footer-text">
+                                <a href="#"><h3>Holiday homes</h3></a>
+                            </div>
+                            <div class="footer-text">
+                                <a href="#"><h3>Hostels</h3></a>
+                            </div>
                         </div>
-                        <div class="footer-text">
-                            <a href="#"><h3>Careers</h3></a>
-                        </div>
-                        <div class="footer-text">
-                            <a href="#"><h3>Privacy</h3></a>
-                        </div>
-                        <div class="footer-text">
-                            <a href="#"><h3>Terms</h3></a>
-                        </div>
+                        <div class="footer-item">
+                            <div class="footer-title">
+                                <h3>Support</h3>
+                            </div>
+                            <div class="footer-text">
+                                <a href="#"><h3>Contact Customer Service</h3></a>
+                            </div>
+                            <div class="footer-text">
+                                <a href="#"><h3>FAQ</h3></a>
+                            </div>
+                        </div>                
                     </div>
-                    <div class="footer-item">
-                        <div class="footer-title">
-                            <h3>Property types</h3>
-                        </div>
-                        <div class="footer-text">
-                            <a href="#"><h3>Guest houses</h3></a>
-                        </div>
-                        <div class="footer-text">
-                            <a href="#"><h3>Hotels</h3></a>
-                        </div>
-                        <div class="footer-text">
-                            <a href="#"><h3>Apartments</h3></a>
-                        </div>
-                        <div class="footer-text">
-                            <a href="#"><h3>Villas</h3></a>
-                        </div>
-                        <div class="footer-text">
-                            <a href="#"><h3>Holiday homes</h3></a>
-                        </div>
-                        <div class="footer-text">
-                            <a href="#"><h3>Hostels</h3></a>
-                        </div>
+                    <div class="copyright">
+                        <h6>© 2022Triphouse, Inc. All rights reserved</h6>
                     </div>
-                    <div class="footer-item">
-                        <div class="footer-title">
-                            <h3>Support</h3>
-                        </div>
-                        <div class="footer-text">
-                            <a href="#"><h3>Contact Customer Service</h3></a>
-                        </div>
-                        <div class="footer-text">
-                            <a href="#"><h3>FAQ</h3></a>
-                        </div>
-                    </div>                
                 </div>
-                <div class="copyright">
-                    <h5>© 2022Triphouse, Inc. All rights reserved</h5>
+
+                <div class="footer-mobile">
+                    <img src="img/logo_white.png" alt="logo">
+                    <div class="footer-mobile-items">
+                        <div class="footer-mobile-item">
+                            <h4>About</h4>
+                        </div>
+                        <div class="footer-mobile-item">
+                            <h4>Property types</h4>
+                        </div>
+                        <div class="footer-mobile-item">
+                            <h4>Support</h4>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        <h6>© 2022Triphouse, Inc. All rights reserved</h6>
+                    </div>
                 </div>
             </footer>
     </body>
