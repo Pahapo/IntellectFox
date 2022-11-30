@@ -331,7 +331,7 @@ input::placeholder {
 .people__info {
   position: absolute;
   content: "";
-  right: 20%;
+  right: 17%;
   top: 80px;
 
   background-color: #fff;
@@ -716,7 +716,7 @@ input::placeholder {
   }
   .header__nav {
     max-width: 328px;
-    padding: 12px 0 0 0;
+    padding: 20px 0 0 0;
   }
   .header__nav .logo img {
     width: 122px;
@@ -753,7 +753,7 @@ input::placeholder {
       "E E";
 
     padding: 8px;
-    margin: calc((100vh - 470px) / 2) 0;
+    margin: calc((95vh - 470px) / 2) 0;
     background-color: #f5bd41;
   }
   .search__block__1 {
