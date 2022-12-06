@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Pahapo/IntellectFox#readme",
   "devDependencies": {
     "eslint": "^8.23.1",
-    "prettier": "2.7.1"
+    "prettier": "2.7.1",
+    "type": "module"
   }
 }

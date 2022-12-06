@@ -1,17 +1,20 @@
+import { calendarBlockEl } from "../js/calendar.js";
+
 const blockPeopleEl = document.getElementById("people-info__input");
-const peopleInfoEl = document.querySelector(".people__info");
+export const peopleInfoEl = document.querySelector(".people__info");
 const countPeopleEl = document.getElementById("count__people");
 
-const lessPeopleEl = document.getElementById("less-people");
-const rectLess = document.querySelector("#less-people rect");
-const pathLess = document.querySelector("#less-people path");
+const lessPeopleEl = document.querySelectorAll(".less-people");
+const rectLess = document.querySelector(".less-people rect");
+const pathLess = document.querySelector(".less-people path");
 
-const morePeopleEl = document.getElementById("more-people");
-const rectMore = document.querySelector("#more-people rect");
-const pathMore = document.querySelector("#more-people path");
+const morePeopleEl = document.querySelectorAll(".more-people");
+const rectMore = document.querySelector(".more-people rect");
+const pathMore = document.querySelector(".more-people path");
 
 blockPeopleEl.addEventListener("focus", () => {
   peopleInfoEl.classList.remove("hidden");
+  calendarBlockEl.classList.add("hidden");
 });
 
 // peopleInfoEl.addEventListener("mouseover", () => {

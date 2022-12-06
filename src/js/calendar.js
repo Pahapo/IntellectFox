@@ -1,12 +1,14 @@
 import { getCalendarMonth, todayYear, getMonth } from "../js/dataCalendar.js";
+import { peopleInfoEl } from "../js/people-info.js";
 
 const todayMonth = document.querySelector(".calendar__month h4");
 const dataCalendar = document.querySelector(".calendar__days");
 const blockTravelEl = document.getElementById("travel-info__input");
-const calendarBlockEl = document.querySelector(".calendar__block");
+export const calendarBlockEl = document.querySelector(".calendar__block");
 
 blockTravelEl.addEventListener("focus", () => {
   calendarBlockEl.classList.remove("hidden");
+  peopleInfoEl.classList.add("hidden");
 });
 
 // calendarBlockEl.addEventListener("mouseover", () => {
