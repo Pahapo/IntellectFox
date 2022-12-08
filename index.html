@@ -178,11 +178,30 @@
             <img src="src/img/google_play.png" alt="google_play" />
             <img src="src/img/app_store.png" alt="app_store" />
           </div>
+          <div class="arrow__down">
+            <img src="src/img/arrow-down.png" />
+          </div>
         </div>
       </div>
     </header>
 
     <main>
+      <div class="av-hotels">
+        <div class="container">
+          <div class="new__container">
+            <div class="title">
+              <h1 class="line2">Available hotels</h1>
+            </div>
+            <div class="swiper mySwiper">
+              <div class="av-hotels__items swiper-wrapper"></div>
+            </div>
+            <div class="swiper-button-next">
+              <img class="btn__next" src="src/img/arrow.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="advantages">
         <div class="container">
           <div class="advantages__title">
@@ -223,44 +242,11 @@
             <div class="title">
               <h1 class="line2">Homes guests loves</h1>
             </div>
-            <div class="homes__items">
+            <div class="swiper mySwiper">
+              <div class="homes__items swiper-wrapper"></div>
+            </div>
+            <div class="swiper-button-next">
               <img class="btn__next" src="src/img/arrow.png" alt="" />
-              <div class="homes__item">
-                <img class="homes__img" src="src/img/rectangle48.png" />
-                <div class="homes__text">
-                  <h2>Hotel Leopold</h2>
-                </div>
-                <div class="homes__location">
-                  <h2>Saint Petersburg, Russia</h2>
-                </div>
-              </div>
-              <div class="homes__item">
-                <img class="homes__img" src="src/img/rectangle49.png" />
-                <div class="homes__text">
-                  <h2>Apartment Sunshine</h2>
-                </div>
-                <div class="homes__location">
-                  <h2>Santa Cruz de Tenerife, Spain</h2>
-                </div>
-              </div>
-              <div class="homes__item">
-                <img class="homes__img" src="src/img/rectangle50.png" />
-                <div class="homes__text">
-                  <h2>Villa Kunerad</h2>
-                </div>
-                <div class="homes__location">
-                  <h2>Vysokie Tatry, Slowakia</h2>
-                </div>
-              </div>
-              <div class="homes__item">
-                <img class="homes__img" src="src/img/rectangle51.png" />
-                <div class="homes__text">
-                  <h2>Hostel Friendship</h2>
-                </div>
-                <div class="homes__location">
-                  <h2>Berlin, Germany</h2>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -284,15 +270,13 @@
               </div>
             </div>
           </div>
+
           <div class="destinations__items">
             <img class="btn__next" src="src/img/arrow.png" alt="" />
             <div class="destinations__item">
               <img class="destinations__img" src="src/img/destination1.png" />
               <div class="destinations__text">
                 <h2>Maldives</h2>
-              </div>
-              <div class="destinations__about">
-                <h4>Book now</h4>
               </div>
             </div>
             <div class="destinations__item">
@@ -594,9 +578,12 @@
         </div>
       </div>
     </footer>
-    <script type="module" src="src/js/people-info.js"></script>
+
+    <script src="src/js/jquery-3.6.0.min.js"></script>
+    <script src="src/js/swiper-bundle.min.js"></script>
+    <!-- <script type="module" src="src/js/people-info.js"></script>
     <script type="module" src="src/js/calendar.js"></script>
-    <script type="module" src="src/js/dataCalendar.js"></script>
+    <script type="module" src="src/js/dataCalendar.js"></script> -->
     <script type="module" src="src/js/main.js"></script>
   </body>
 </html>
