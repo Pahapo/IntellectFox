@@ -40,39 +40,25 @@
           <div class="page__search">
             <div class="search__title">
               <h4>Your destination or hotel name</h4>
-              <h4>Check__in — Check__out</h4>
+              <h4>Check in — Check out</h4>
             </div>
             <div class="search__block">
               <div class="search">
-                <input type="text" id="country-info__input" placeholder="New York" />
+                <input type="text" class="country-info__input" placeholder="New York" />
                 <input type="text" id="travel-info__input" placeholder="Tue 15 Sept — Sat 19 Sept" value="" />
                 <input type="text" id="people-info__input" placeholder="2 Adults — 0 Children — 1 Room" value="" />
               </div>
 
-              <div class="search__btn">
+              <div class="search__btn" id="search__btn1">
                 <input type="button" value="Search" />
               </div>
 
               <div class="calendar__block hidden">
                 <div class="calendar__items">
-                  <div class="calendar__item">
-                    <div class="calendar__month">
-                      <h4></h4>
-                    </div>
-                    <div class="calendar__day-week">
-                      <p>Mo</p>
-                      <p>Tu</p>
-                      <p>We</p>
-                      <p>Th</p>
-                      <p>Fr</p>
-                      <p>Sa</p>
-                      <p>Su</p>
-                    </div>
-                    <div class="calendar__days">
-                      <!-- code js -->
-                    </div>
-                  </div>
+                  <!--js code-->
                 </div>
+                <img class="btn-calendar__prev" src="src/img/arrow-left__calendar.png" alt="" />
+                <img class="btn-calendar__next" src="src/img/arrow-right__calendar.png" alt="" />
               </div>
 
               <div class="people__info hidden">
@@ -138,7 +124,7 @@
               <div class="search__mobile">
                 <img src="src/img/search.png" alt="search" />
                 <h5>
-                  <input type="text" placeholder="Your destination or hotel name" />
+                  <input class="country-info__input" type="text" placeholder="Your destination or hotel name" />
                 </h5>
               </div>
             </div>
@@ -170,7 +156,7 @@
                 </div>
               </div>
             </div>
-            <div class="search__btn__mobile">
+            <div class="search__btn__mobile" id="search__btn2">
               <input type="button" value="Search" />
             </div>
           </div>
@@ -179,7 +165,7 @@
             <img src="src/img/app_store.png" alt="app_store" />
           </div>
           <div class="arrow__down">
-            <img src="src/img/arrow-down.png" />
+            <img src="src/img/arrow-right-down.png" />
           </div>
         </div>
       </div>
@@ -192,11 +178,14 @@
             <div class="title">
               <h1 class="line2">Available hotels</h1>
             </div>
-            <div class="swiper mySwiper">
+            <div class="swiper mySwiper1">
               <div class="av-hotels__items swiper-wrapper"></div>
-            </div>
-            <div class="swiper-button-next">
-              <img class="btn__next" src="src/img/arrow.png" alt="" />
+              <div class="swiper-button-next1">
+                <img class="btn__next" src="src/img/arrow-right.png" alt="" />
+              </div>
+              <div class="swiper-button-prev1">
+                <img class="btn__prev" src="src/img/arrow-left.png" alt="" />
+              </div>
             </div>
           </div>
         </div>
@@ -242,11 +231,14 @@
             <div class="title">
               <h1 class="line2">Homes guests loves</h1>
             </div>
-            <div class="swiper mySwiper">
+            <div class="swiper mySwiper2">
               <div class="homes__items swiper-wrapper"></div>
-            </div>
-            <div class="swiper-button-next">
-              <img class="btn__next" src="src/img/arrow.png" alt="" />
+              <div class="swiper-button-next2">
+                <img class="btn__next" src="src/img/arrow-right.png" alt="" />
+              </div>
+              <div class="swiper-button-prev2">
+                <img class="btn__prev" src="src/img/arrow-left.png" alt="" />
+              </div>
             </div>
           </div>
         </div>
@@ -272,7 +264,7 @@
           </div>
 
           <div class="destinations__items">
-            <img class="btn__next" src="src/img/arrow.png" alt="" />
+            <img class="btn__next" src="src/img/arrow-right.png" alt="" />
             <div class="destinations__item">
               <img class="destinations__img" src="src/img/destination1.png" />
               <div class="destinations__text">
@@ -332,7 +324,7 @@
             <h1 class="line2">Guests reviews</h1>
           </div>
           <div class="hostel__items">
-            <img class="btn__next" src="src/img/arrow.png" alt="" />
+            <img class="btn__next" src="src/img/arrow-right.png" alt="" />
             <div class="hostel__item">
               <div class="hostel__price">
                 <img class="hostel__img" src="src/img/hostel1.png" />
@@ -581,9 +573,10 @@
 
     <script src="src/js/jquery-3.6.0.min.js"></script>
     <script src="src/js/swiper-bundle.min.js"></script>
-    <!-- <script type="module" src="src/js/people-info.js"></script>
-    <script type="module" src="src/js/calendar.js"></script>
-    <script type="module" src="src/js/dataCalendar.js"></script> -->
+    <!-- <script type="module" src="src/js/people-info.js"></script> -->
+    <!-- <script type="module" src="src/js/calendar.js"></script> -->
+    <script type="module" src="src/js/dataCalendar.js"></script>
+    <script type="module" src="src/js/sliders.js"></script>
     <script type="module" src="src/js/main.js"></script>
   </body>
 </html>

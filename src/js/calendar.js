@@ -1,14 +1,13 @@
-import { getCalendarMonth, todayYear, getMonth } from "../js/dataCalendar.js";
-import { peopleInfoEl } from "../js/people-info.js";
+import { calendar, getYear, getMonth } from "../js/dataCalendar.js";
+// import { peopleInfoEl } from "../js/people-info.js";
 
-const todayMonth = document.querySelector(".calendar__month h4");
-const dataCalendar = document.querySelector(".calendar__days");
+// const dataCalendar = document.querySelector(".calendar__days");
 const blockTravelEl = document.getElementById("travel-info__input");
 export const calendarBlockEl = document.querySelector(".calendar__block");
 
 blockTravelEl.addEventListener("focus", () => {
   calendarBlockEl.classList.remove("hidden");
-  peopleInfoEl.classList.add("hidden");
+  // peopleInfoEl.classList.add("hidden");
 });
 
 // calendarBlockEl.addEventListener("mouseover", () => {
@@ -18,31 +17,40 @@ blockTravelEl.addEventListener("focus", () => {
 //   });
 // });
 
-todayMonth.innerHTML = `${getMonth()} ${todayYear}`; // поменять
-
-const calendar = getCalendarMonth(4, 4) // something
-  .map((item) => {
-    let date = `
-    <div class="calendar__day">
-      <p>${item[0].dayOfMonth}</p>
-      <p>${item[1].dayOfMonth}</p>
-      <p>${item[2].dayOfMonth}</p>
-      <p>${item[3].dayOfMonth}</p>
-      <p>${item[4].dayOfMonth}</p>
-      <p>${item[5].dayOfMonth}</p>
-      <p>${item[6].dayOfMonth}</p>
+const calendarEl = calendar
+  .map((item, index) => {
+    return `
+     <div class="calendar__item">
+      <div class="calendar__month">
+        <h4>${getMonth(index)} ${getYear(index)}</h4>
+      </div>
+      <div class="calendar__day-week">
+       <p>Mo</p>
+       <p>Tu</p>
+       <p>We</p>
+       <p>Th</p>
+       <p>Fr</p>
+       <p>Sa</p>
+       <p>Su</p>
+      </div>  
+      ${item.map((item2) => {
+        return `
+        <div class="calendar__day">
+          <p>${item2[0].dayOfMonth}</p>
+          <p>${item2[1].dayOfMonth}</p>
+          <p>${item2[2].dayOfMonth}</p>
+          <p>${item2[3].dayOfMonth}</p>
+          <p>${item2[4].dayOfMonth}</p>
+          <p>${item2[5].dayOfMonth}</p>
+          <p>${item2[6].dayOfMonth}</p>
+        </div>`;
+      })}
     </div>`;
-
-    // for (let i = 0; i < item.length; i++) {
-    //   if (item[i].notCurrentMonth === true) {
-    //     item[i].parentElement.classList.add("other__month");
-    //   }
-    // }
-
-    return date;
   })
   .join("");
-dataCalendar.insertAdjacentHTML("afterbegin", calendar);
+
+const dataCalendar = document.querySelector(".calendar__items");
+dataCalendar.insertAdjacentHTML("afterbegin", calendarEl);
 
 const selectedDays = document.querySelectorAll(".calendar__days p");
 

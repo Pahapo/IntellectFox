@@ -1,4 +1,4 @@
-// import { calendarBlockEl } from "../js/calendar.js";
+import { calendarBlockEl } from "../js/calendar.js";
 // import { peopleInfoEl } from "../js/people-info.js";
 
 /* close ADV */
@@ -12,12 +12,12 @@ closeMobEl.addEventListener("click", (event) => {
   event.target.parentElement.parentElement.parentElement.classList.add("hidden");
 });
 
-// const blockCountryEl = document.getElementById("country-info__input");
+const blockCountryEl = document.querySelector(".country-info__input");
 
-// blockCountryEl.addEventListener("focus", () => {
-//   calendarBlockEl.classList.add("hidden");
-//   peopleInfoEl.classList.add("hidden");
-// });
+blockCountryEl.addEventListener("focus", () => {
+  calendarBlockEl.classList.add("hidden");
+  // peopleInfoEl.classList.add("hidden");
+});
 
 /* fetch API */
 const cards = document.querySelector(".homes__items");
@@ -51,13 +51,19 @@ fetch("https://if-student-api.onrender.com/api/hotels/popular", {
 
 /* Отправка запроса по destination or hotel name */
 const AvHotels = document.querySelector(".av-hotels__items");
-const btnSearch = document.querySelector(".search__btn");
+const btnSearch1 = document.getElementById("search__btn1");
+const btnSearch2 = document.getElementById("search__btn2");
 
-btnSearch.addEventListener("click", () => {
+const url = new URL("https://if-student-api.onrender.com/api/hotels");
+
+const viewBlockAvHottels = () => {
   document.querySelector(".av-hotels").style.display = "block";
   document.querySelector(".arrow__down").style.display = "block";
-  const value = document.getElementById("country-info__input").value;
-  let url = `https://if-student-api.onrender.com/api/hotels?search=${value}`;
+  const value1 = document.querySelectorAll(".country-info__input")[0].value;
+  const value2 = document.querySelectorAll(".country-info__input")[1].value;
+
+  // добавление параметров к домену
+  url.searchParams.append("search", value1 + value2);
 
   fetch(url, {
     method: "GET",
@@ -85,19 +91,7 @@ btnSearch.addEventListener("click", () => {
       AvHotels.insertAdjacentHTML("afterbegin", hotelsItems);
     })
     .catch((err) => console.error(err));
-});
+};
 
-/* slider SWIPER */
-
-let swiper = new Swiper(".mySwiper", {
-  loop: true, // бесконечный слайдер
-  spaceBetween: 30,
-  slidesPerView: 2, // количество слайдов для показа
-  navigation: {
-    nextEl: ".swiper-button-next",
-  },
-  // mousewheel: {
-  //   // прокрутка мышью с помощью колеса
-  //   sensitivity: 1,
-  // },
-});
+btnSearch1.addEventListener("click", viewBlockAvHottels);
+btnSearch2.addEventListener("click", viewBlockAvHottels);
