@@ -1,497 +1,582 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <title>TripHouse</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- for mobile -->
-        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-        <link rel="manifest" href="favicon/site.webmanifest">
-        <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-            <header class="header">
-                <div class="header-nav">
-                    <div class="logo">
-                        <img src="img/logo.png" alt="logo">
-                    </div>
-                    <ul class="nav-items">
-                        <li class="nav-item"><a href="#"><h2 class="selected-text">Stays</h2></a></li>
-                        <li class="nav-item"><a href="#"><h2>Attractions</h2></a></li>
-                        <li class="nav-item"><img src="img/night.png" alt="day/night"></li>
-                        <li class="nav-item"><img src="img/account.png" alt="account"></li>
-                        <li class="nav-item"><img src="img/menu.png" alt="menu"></li>
-                    </ul>
-                </div>
-                <div class="container">
-                    <div class="header-page">
-                        <div class="page-text">
-                            <p>Discover stays<br>to live, work or just relax</p>
-                        </div>
-                        <div class="page-search">
-                            <div class="search-title">
-                                <h4>Your destination or hotel name</h4>
-                                <h4>Check-in — Check-out</h4>
-                            </div>
-                            <div class="search-block">
-                                <div class="search">
-                                    <input type="text" placeholder="New York">
-                                    <input type="text" placeholder="Tue 15 Sept — Sat 19 Sept">
-                                    <input type="text" placeholder="2 Adults — 0 Children — 1 Room">
-                                </div>
-                                <div class="search-btn">
-                                    <input type="button" value="Search">
-                                </div>
-                            </div>
-                        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>TripHouse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- for mobile -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__nav">
+        <div class="logo">
+          <img src="src/img/logo.svg" alt="logo" />
+        </div>
+        <ul class="nav__items">
+          <li class="nav__item">
+            <a href="#"><h2 class="selected__text">Stays</h2></a>
+          </li>
+          <li class="nav__item">
+            <a href="#"><h2>Attractions</h2></a>
+          </li>
+          <li class="nav__item"><img src="src/img/night.svg" alt="day/night" /></li>
+          <li class="nav__item"><img src="src/img/account.svg" alt="account" /></li>
+          <li class="nav__item"><img src="src/img/menu.svg" alt="menu" /></li>
+        </ul>
+      </div>
+      <div class="container">
+        <div class="header__page">
+          <div class="page__text">
+            <p>Discover stays<br />to live, work or just relax</p>
+          </div>
+          <div class="page__search">
+            <div class="search__title">
+              <h4>Your destination or hotel name</h4>
+              <h4>Check in — Check out</h4>
+            </div>
+            <div class="search__block">
+              <div class="search">
+                <input type="text" class="country-info__input" placeholder="New York" />
+                <input type="text" id="travel-info__input" placeholder="Tue 15 Sept — Sat 19 Sept" value="" />
+                <input type="text" id="people-info__input" placeholder="2 Adults — 0 Children — 1 Room" value="" />
+              </div>
 
-                        <div class="page-search-mobile">
-                            <div class="search-block-1">
-                                <div class="search-mobile">
-                                    <img src="img/search.png" alt="search">
-                                    <h5><input type="text" placeholder="Your destination or hotel name"></h5>
-                                </div>
-                            </div>
-                            <div class="search-block-2">
-                                <div class="search-mobile">
-                                    <p>Check-in date</p>
-                                    <h5><input type="text" placeholder="Tue 15 Sept 2020"></h5>
-                                </div>
-                            </div>
-                            <div class="search-block-3">
-                                <div class="search-mobile">
-                                    <p>Check-out date</p>
-                                    <h5><input type="text" placeholder="Sat 19 Sept 2020"></h5>
-                                </div>
-                            </div>
-                            <div class="search-block-4">
-                                <div class="search-mobile">
-                                    <div class="search-mini-block">
-                                        <p>Adults</p>
-                                        <h5><input type="number" placeholder="2"></h5>
-                                    </div>
-                                    <div class="search-mini-block">
-                                        <p>Children</p>
-                                        <h5><input type="number" placeholder="0"></h5>
-                                    </div>
-                                    <div class="search-mini-block">
-                                        <p>Rooms</p>
-                                        <h5><input type="number" placeholder="1"></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="search-btn-mobile">
-                                <input type="button" value="Search">
-                            </div>
-                        </div>
-                        <div class="page-adv">
-                            <img src="img/google_play.png" alt="google_play">
-                            <img src="img/app_store.png" alt="app_store">
-                        </div>
-                    </div>
-                </div>
-            </header>
+              <div class="search__btn" id="search__btn1">
+                <input type="button" value="Search" />
+              </div>
 
-             <main>
-                <div class="advantages">
-                    <div class="container">
-                        <div class="advantages-title">
-                            <h1>What do we offer</h1>
-                        </div>
-                        <div class="advantages-items">
-                            <div class="advantages-item">
-                                <img class="advantages-img" src="img/advant1.png">
-                                <div class="advantages-text">
-                                    <h2>Support 24/7</h2>
-                                </div>
-                            </div>
-                            <div class="advantages-item">
-                                <img class="advantages-img" src="img/advant2.png">
-                                <div class="advantages-text">
-                                    <h2>Communicate directly</h2>
-                                </div>
-                            </div>
-                            <div class="advantages-item">
-                                <img class="advantages-img" src="img/advant3.png">
-                                <div class="advantages-text">
-                                    <h2>Book online</h2>
-                                </div>
-                            </div>
-                            <div class="advantages-item">
-                                <img class="advantages-img" src="img/advant4.png">
-                                <div class="advantages-text">
-                                    <h2>Real guest reviews</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              <div class="calendar__block hidden">
+                <div class="calendar__items">
+                  <!--js code-->
                 </div>
+                <img class="btn-calendar__prev" src="src/img/arrow-left__calendar.png" alt="" />
+                <img class="btn-calendar__next" src="src/img/arrow-right__calendar.png" alt="" />
+              </div>
 
-                <div class="homes">
-                    <div class="container">
-                        <div class="new-container">
-                            <div class="title">
-                                <h1>Homes guests loves</h1>
-                            </div>
-                            <div class="homes-items">
-                                <img class="btn-next" src="img/arrow.png" alt="">
-                                <div class="homes-item">
-                                    <img class="homes-img" src="img/rectangle48.png">
-                                    <div class="homes-text">
-                                        <h2>Hotel Leopold</h2>
-                                    </div>
-                                    <div class="homes-location">
-                                        <h2>Saint Petersburg, Russia</h2>
-                                    </div>
-                                </div>
-                                <div class="homes-item">
-                                    <img class="homes-img" src="img/rectangle49.png">
-                                    <div class="homes-text">
-                                        <h2>Apartment Sunshine</h2>
-                                    </div>
-                                    <div class="homes-location">
-                                        <h2>Santa  Cruz de Tenerife, Spain</h2>
-                                    </div>
-                                </div>
-                                <div class="homes-item">
-                                    <img class="homes-img" src="img/rectangle50.png">
-                                    <div class="homes-text">
-                                        <h2>Villa Kunerad</h2>
-                                    </div>
-                                    <div class="homes-location">
-                                        <h2>Vysokie Tatry, Slowakia</h2>
-                                    </div>
-                                </div>
-                                <div class="homes-item">
-                                    <img class="homes-img" src="img/rectangle51.png">
-                                    <div class="homes-text">
-                                        <h2>Hostel Friendship</h2>
-                                    </div>
-                                    <div class="homes-location">
-                                        <h2>Berlin, Germany</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+              <div class="people__info hidden">
+                <div class="count__people__items">
+                  <div class="count__people__item">
+                    <p>Adults</p>
+                    <div class="count__people__block">
+                      <svg class="less-people" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="0.5" width="29" height="29" fill="white" stroke="#3077C6" />
+                        <path d="M19.3242 16.2783H10.5176V14.9512H19.3242V16.2783Z" fill="#3077C6" />
+                      </svg>
+                      <p id="count__people">2</p>
+                      <svg class="more-people" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="0.5" width="29" height="29" fill="white" stroke="#3077C6" />
+                        <path
+                          d="M16.2822 15.1357H19.8506V16.6738H16.2822V20.7168H14.6475V16.6738H11.0791V15.1357H14.6475V11.4004H16.2822V15.1357Z"
+                          fill="#3077C6"
+                        />
+                      </svg>
                     </div>
+                  </div>
+                  <div class="count__people__item">
+                    <p>Children</p>
+                    <div class="count__people__block">
+                      <svg class="less-people" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="0.5" width="29" height="29" fill="white" stroke="#CECECE" />
+                        <path d="M19.3242 16.2783H10.5176V14.9512H19.3242V16.2783Z" fill="#CECECE" />
+                      </svg>
+                      <p id="count__people">0</p>
+                      <svg class="more-people" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="0.5" width="29" height="29" fill="white" stroke="#3077C6" />
+                        <path
+                          d="M16.2822 15.1357H19.8506V16.6738H16.2822V20.7168H14.6475V16.6738H11.0791V15.1357H14.6475V11.4004H16.2822V15.1357Z"
+                          fill="#3077C6"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="count__people__item">
+                    <p>Rooms</p>
+                    <div class="count__people__block">
+                      <svg class="less-people" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="0.5" width="29" height="29" fill="white" stroke="#CECECE" />
+                        <path d="M19.3242 16.2783H10.5176V14.9512H19.3242V16.2783Z" fill="#CECECE" />
+                      </svg>
+                      <p id="count__people">1</p>
+                      <svg class="more-people" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="0.5" width="29" height="29" fill="white" stroke="#3077C6" />
+                        <path
+                          d="M16.2822 15.1357H19.8506V16.6738H16.2822V20.7168H14.6475V16.6738H11.0791V15.1357H14.6475V11.4004H16.2822V15.1357Z"
+                          fill="#3077C6"
+                        />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
+              </div>
+            </div>
+          </div>
 
-                <div class="destinations">
-                    <div class="container">
-                        <div class="title">
-                            <h1>The best destinations</h1>
-                        </div>
-                        <div class="destinations-nav">
-                            <div class="destinations-tabs">
-                                <div class="destinations-tab">
-                                    <h2>Regions</h2>
-                                </div>
-                                <div class="destinations-tab">
-                                    <h2>Cities</h2>
-                                </div>
-                                <div class="destinations-tab">
-                                    <h2>Places of interest</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="destinations-items">
-                            <img class="btn-next" src="img/arrow.png" alt="">
-                            <div class="destinations-item">
-                                <img class="destinations-img" src="img/destination1.png">
-                                <div class="destinations-text">
-                                    <h2>Maldives</h2>
-                                </div>
-                                <div class="destinations-about">
-                                    <h4>Book now</h4>
-                                </div>
-                            </div>
-                            <div class="destinations-item">
-                                <img class="destinations-img" src="img/destination2.png">
-                                <div class="destinations-text">
-                                    <h2>Spain</h2>
-                                </div>
-                            </div>
-                            <div class="destinations-item">
-                                <img class="destinations-img" src="img/destination3.png">
-                                <div class="destinations-text">
-                                    <h2>Norway</h2>
-                                </div>
-                            </div>
-                            <div class="destinations-item">
-                                <img class="destinations-img" src="img/destination4.png">
-                                <div class="destinations-text">
-                                    <h2>Island</h2>
-                                </div>
-                            </div>                  
-                        </div>
-                    </div>
+          <div class="page__search__mobile">
+            <div class="search__block__1">
+              <div class="search__mobile">
+                <img src="src/img/search.png" alt="search" />
+                <h5>
+                  <input class="country-info__input" type="text" placeholder="Your destination or hotel name" />
+                </h5>
+              </div>
+            </div>
+            <div class="search__block__2">
+              <div class="search__mobile">
+                <p>Check-in date</p>
+                <h5><input type="text" placeholder="Tue 15 Sept 2020" /></h5>
+              </div>
+            </div>
+            <div class="search__block__3">
+              <div class="search__mobile">
+                <p>Check-out date</p>
+                <h5><input type="text" placeholder="Sat 19 Sept 2020" /></h5>
+              </div>
+            </div>
+            <div class="search__block__4">
+              <div class="search__mobile">
+                <div class="search__mini__block">
+                  <p>Adults</p>
+                  <h5><input type="number" placeholder="2" /></h5>
                 </div>
+                <div class="search__mini__block">
+                  <p>Children</p>
+                  <h5><input type="number" placeholder="0" /></h5>
+                </div>
+                <div class="search__mini__block">
+                  <p>Rooms</p>
+                  <h5><input type="number" placeholder="1" /></h5>
+                </div>
+              </div>
+            </div>
+            <div class="search__btn__mobile" id="search__btn2">
+              <input type="button" value="Search" />
+            </div>
+          </div>
+          <div class="page__adv">
+            <img src="src/img/google_play.png" alt="google_play" />
+            <img src="src/img/app_store.png" alt="app_store" />
+          </div>
+          <div class="arrow__down">
+            <img src="src/img/arrow-right-down.png" />
+          </div>
+        </div>
+      </div>
+    </header>
 
-                <div class="signup-block">
-                    <div class="container">
-                        <div class="new-container2">
-                            <div class="signup">
-                                <div class="close"></div>
-                                <div class="signup-img">
-                                    <img src="img/user.png" alt="user">
-                                </div>
-                                <div class="signup-content">
-                                    <div class="content-text">
-                                        <h2>Sign up and get 20% off your first booking</h2>
-                                    </div>
-                                    <div class="content-ntn">
-                                        <h4>Sign up</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <main>
+      <div class="av-hotels">
+        <div class="container">
+          <div class="new__container">
+            <div class="title">
+              <h1 class="line2">Available hotels</h1>
+            </div>
+            <div class="swiper mySwiper1">
+              <div class="av-hotels__items swiper-wrapper"></div>
+              <div class="swiper-button-next1">
+                <img class="btn__next" src="src/img/arrow-right.png" alt="" />
+              </div>
+              <div class="swiper-button-prev1">
+                <img class="btn__prev" src="src/img/arrow-left.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                <div class="hostel">
-                    <div class="container">
-                        <div class="title">
-                            <h1>Guests reviews</h1>
-                        </div>
-                        <div class="hostel-items">
-                            <img class="btn-next" src="img/arrow.png" alt="">
-                            <div class="hostel-item">
-                                <div class="hostel-price">
-                                    <img class="hostel-img" src="img/hostel1.png">
-                                    <div class="price">
-                                        <h4>From <span>250 USD</span></h4>
-                                    </div>
-                                </div>
-                                <div class="hostel-info">
-                                    <div class="hostel-about">
-                                        <div class="about-text">
-                                            <div class="about-name"><h4>Ubud Bali Resort&SPA</h4></div>
-                                            <div class="about-location"><h4>Bali, Indonesia</h4></div>
-                                        </div>
-                                        <div class="about-score">
-                                            <div class="score-star">9,4</div>
-                                            <div class="score-reviews"><h6>1324 reviews</h6></div>
-                                        </div>
-                                    </div>
-                                    <div class="hostel-person">
-                                        <div class="person-icon">
-                                            <img src="img/person.png" alt="person">
-                                        </div>
-                                        <div class="person-data">
-                                            <div class="person-name">
-                                                <h4>Hanna Ivanova</h4>
-                                            </div>
-                                            <div class="person-location">
-                                                <div class="location-icon">
-                                                    <img src="img/ukraine.png" alt="location">
-                                                </div>
-                                                <div class="location-name">
-                                                    <h4>Ukraine</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hostel-review">
-                                        <h4>Great location, really pleasant and clean rooms, but the thing that makes this such a good place to stay are the staff. 
-                                            All of the people are incredibly helpful and generous with their time and advice.</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hostel-item">
-                                <div class="hostel-price">
-                                    <img class="hostel-img" src="img/hostel2.png">
-                                    <div class="price">
-                                        <h4>From <span>40 USD</span></h4>
-                                    </div>
-                                </div>
-                                <div class="hostel-info">
-                                    <div class="hostel-about">
-                                        <div class="about-text">
-                                            <div class="about-name"><h4>King Kong Hostel</h4></div>
-                                            <div class="about-location"><h4>Rotterdam, Netherlands</h4></div>
-                                        </div>
-                                        <div class="about-score">
-                                            <div class="score-star">8,9</div>
-                                            <div class="score-reviews"><h6>2016 reviews</h6></div>
-                                        </div>
-                                    </div>
-                                    <div class="hostel-person">
-                                        <div class="person-icon">
-                                            <img src="img/person.png" alt="person">
-                                        </div>
-                                        <div class="person-data">
-                                            <div class="person-name">
-                                                <h4>Adam Smith</h4>
-                                            </div>
-                                            <div class="person-location">
-                                                <div class="location-icon">
-                                                    <img src="img/usa.png" alt="location">
-                                                </div>
-                                                <div class="location-name">
-                                                    <h4>USA</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hostel-review">
-                                        <h4>I've been in this hostel for a month and here is the best hostel of all.
-                                            Excellent management of excellent and ethical staff and bedrooms Bathrooms are always clean and excellent.
-                                            Most importantly, those who work here are kind and good-natured.</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hostel-item">
-                                <div class="hostel-price">
-                                    <img class="hostel-img" src="img/hostel3.png">
-                                    <div class="price">
-                                        <h4>From <span>100 USD</span></h4>
-                                    </div>
-                                </div>
-                                <div class="hostel-info">
-                                    <div class="hostel-about">
-                                        <div class="about-text">
-                                            <div class="about-name"><h4>Rokoko Hotel</h4></div>
-                                            <div class="about-location"><h4>Ourika, Marocco</h4></div>
-                                        </div>
-                                        <div class="about-score">
-                                            <div class="score-star">9,1</div>
-                                            <div class="score-reviews"><h6>815 reviews</h6></div>
-                                        </div>
-                                    </div>
-                                    <div class="hostel-person">
-                                        <div class="person-icon">
-                                            <img src="img/person.png" alt="person">
-                                        </div>
-                                        <div class="person-data">
-                                            <div class="person-name">
-                                                <h4>Anika Messer</h4>
-                                            </div>
-                                            <div class="person-location">
-                                                <div class="location-icon">
-                                                    <img src="img/germany.png" alt="location">
-                                                </div>
-                                                <div class="location-name">
-                                                    <h4>Germany</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hostel-review">
-                                        <h4>Efficient, friendly, professional, and appropriately attentive. Great hotel in a great location. 
-                                            Easy access to all the surrounding historical sites. Staff is fantastic. 
-                                            Will definitely stay at this location during my next stay in Marocco.</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pagination">
-                            <div class="circle circle-black"></div>
-                            <div class="circle"></div>
-                            <div class="circle"></div>
-                            <div class="circle"></div>
-                        </div>
-                    </div>
-                </div>
+      <div class="advantages">
+        <div class="container">
+          <div class="advantages__title">
+            <h1 class="line2">What do we offer</h1>
+          </div>
+          <div class="advantages__items">
+            <div class="advantages__item">
+              <img class="advantages__img" src="src/img/advant1.svg" />
+              <div class="advantages__text">
+                <h2>Support 24/7</h2>
+              </div>
+            </div>
+            <div class="advantages__item">
+              <img class="advantages__img" src="src/img/advant2.svg" />
+              <div class="advantages__text">
+                <h2>Communicate directly</h2>
+              </div>
+            </div>
+            <div class="advantages__item">
+              <img class="advantages__img" src="src/img/advant3.svg" />
+              <div class="advantages__text">
+                <h2>Book online</h2>
+              </div>
+            </div>
+            <div class="advantages__item">
+              <img class="advantages__img" src="src/img/advant4.svg" />
+              <div class="advantages__text">
+                <h2>Real guest reviews</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                <div class="signup-block-mobile">
-                    <div class="container">
-                        <div class="signup-mobile">
-                            <div class="close"></div>
-                            <div class="signup-mobile-logo">
-                                <img src="img/logo_white_mini.png" alt="logo">
-                            </div>
-                            <div class="signup-mobile-text">
-                                <h6>Sign up in the app and get 20%<br> off your first booking</h6>
-                            </div>
-                            <div class="signup-mobile-btn">
-                                <h3>Install</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
+      <div class="homes">
+        <div class="container">
+          <div class="new__container">
+            <div class="title">
+              <h1 class="line2">Homes guests loves</h1>
+            </div>
+            <div class="swiper mySwiper2">
+              <div class="homes__items swiper-wrapper"></div>
+              <div class="swiper-button-next2">
+                <img class="btn__next" src="src/img/arrow-right.png" alt="" />
+              </div>
+              <div class="swiper-button-prev2">
+                <img class="btn__prev" src="src/img/arrow-left.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            <footer>
-                <div class="footer">
-                    <div class="footer-items">
-                        <div class="footer-item">
-                            <div class="footer-title">
-                                <h3>About</h3>
-                            </div>
-                            <div class="footer-text">
-                                <a href="#"><h3>How Triphouse works</h3></a>
-                            </div>
-                            <div class="footer-text">
-                                <a href="#"><h3>Careers</h3></a>
-                            </div>
-                            <div class="footer-text">
-                                <a href="#"><h3>Privacy</h3></a>
-                            </div>
-                            <div class="footer-text">
-                                <a href="#"><h3>Terms</h3></a>
-                            </div>
-                        </div>
-                        <div class="footer-item">
-                            <div class="footer-title">
-                                <h3>Property types</h3>
-                            </div>
-                            <div class="footer-text">
-                                <a href="#"><h3>Guest houses</h3></a>
-                            </div>
-                            <div class="footer-text">
-                                <a href="#"><h3>Hotels</h3></a>
-                            </div>
-                            <div class="footer-text">
-                                <a href="#"><h3>Apartments</h3></a>
-                            </div>
-                            <div class="footer-text">
-                                <a href="#"><h3>Villas</h3></a>
-                            </div>
-                            <div class="footer-text">
-                                <a href="#"><h3>Holiday homes</h3></a>
-                            </div>
-                            <div class="footer-text">
-                                <a href="#"><h3>Hostels</h3></a>
-                            </div>
-                        </div>
-                        <div class="footer-item">
-                            <div class="footer-title">
-                                <h3>Support</h3>
-                            </div>
-                            <div class="footer-text">
-                                <a href="#"><h3>Contact Customer Service</h3></a>
-                            </div>
-                            <div class="footer-text">
-                                <a href="#"><h3>FAQ</h3></a>
-                            </div>
-                        </div>                
-                    </div>
-                    <div class="copyright">
-                        <h6>© 2022Triphouse, Inc. All rights reserved</h6>
-                    </div>
-                </div>
+      <div class="destinations">
+        <div class="container">
+          <div class="title">
+            <h1 class="line2">The best destinations</h1>
+          </div>
+          <div class="destinations__nav">
+            <div class="destinations__tabs">
+              <div class="destinations__tab">
+                <h2>Regions</h2>
+              </div>
+              <div class="destinations__tab">
+                <h2>Cities</h2>
+              </div>
+              <div class="destinations__tab">
+                <h2>Places of interest</h2>
+              </div>
+            </div>
+          </div>
 
-                <div class="footer-mobile">
-                    <img src="img/logo_white.png" alt="logo">
-                    <div class="footer-mobile-items">
-                        <div class="footer-mobile-item">
-                            <h4>About</h4>
-                        </div>
-                        <div class="footer-mobile-item">
-                            <h4>Property types</h4>
-                        </div>
-                        <div class="footer-mobile-item">
-                            <h4>Support</h4>
-                        </div>
-                    </div>
-                    <div class="copyright">
-                        <h6>© 2022Triphouse, Inc. All rights reserved</h6>
-                    </div>
+          <div class="destinations__items">
+            <img class="btn__next" src="src/img/arrow-right.png" alt="" />
+            <div class="destinations__item">
+              <img class="destinations__img" src="src/img/destination1.png" />
+              <div class="destinations__text">
+                <h2>Maldives</h2>
+              </div>
+            </div>
+            <div class="destinations__item">
+              <img class="destinations__img" src="src/img/destination2.png" />
+              <div class="destinations__text">
+                <h2>Spain</h2>
+              </div>
+            </div>
+            <div class="destinations__item">
+              <img class="destinations__img" src="src/img/destination3.png" />
+              <div class="destinations__text">
+                <h2>Norway</h2>
+              </div>
+            </div>
+            <div class="destinations__item">
+              <img class="destinations__img" src="src/img/destination4.png" />
+              <div class="destinations__text">
+                <h2>Island</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="signup__block">
+        <div class="container">
+          <div class="new__container2">
+            <div class="signup">
+              <div class="close">
+                <img src="src/img/close.png" alt="close" />
+              </div>
+              <div class="signup__info">
+                <div class="signup__img">
+                  <img src="src/img/user.svg" alt="user" />
                 </div>
-            </footer>
-    </body>
+                <div class="signup__content">
+                  <div class="content__text">
+                    <h2>Sign up and get 20% off your first booking</h2>
+                  </div>
+                  <div class="content__btn">
+                    <h4>Sign up</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hostel">
+        <div class="container">
+          <div class="title">
+            <h1 class="line2">Guests reviews</h1>
+          </div>
+          <div class="hostel__items">
+            <img class="btn__next" src="src/img/arrow-right.png" alt="" />
+            <div class="hostel__item">
+              <div class="hostel__price">
+                <img class="hostel__img" src="src/img/hostel1.png" />
+                <div class="price">
+                  <h4>From <span>250 USD</span></h4>
+                </div>
+              </div>
+              <div class="hostel__info">
+                <div class="hostel__about">
+                  <div class="about__text">
+                    <div class="about__name"><h4>Ubud Bali Resort&SPA</h4></div>
+                    <div class="about__location"><h4>Bali, Indonesia</h4></div>
+                  </div>
+                  <div class="about__score">
+                    <div class="score__star">9,4</div>
+                    <div class="score__reviews"><h6>1324 reviews</h6></div>
+                  </div>
+                </div>
+                <div class="hostel__person">
+                  <div class="person__icon">
+                    <img src="src/img/person.png" alt="person" />
+                  </div>
+                  <div class="person__data">
+                    <div class="person__name">
+                      <h4>Hanna Ivanova</h4>
+                    </div>
+                    <div class="person__location">
+                      <div class="location__icon">
+                        <img src="src/img/ukraine.png" alt="location" />
+                      </div>
+                      <div class="location__name">
+                        <h4>Ukraine</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hostel__review">
+                  <h4>
+                    Great location, really pleasant and clean rooms, but the thing that makes this such a good place to stay are the staff. All of the
+                    people are incredibly helpful and generous with their time and advice.
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="hostel__item">
+              <div class="hostel__price">
+                <img class="hostel__img" src="src/img/hostel2.png" />
+                <div class="price">
+                  <h4>From <span>40 USD</span></h4>
+                </div>
+              </div>
+              <div class="hostel__info">
+                <div class="hostel__about">
+                  <div class="about__text">
+                    <div class="about__name"><h4>King Kong Hostel</h4></div>
+                    <div class="about__location"><h4>Rotterdam, Netherlands</h4></div>
+                  </div>
+                  <div class="about__score">
+                    <div class="score__star">8,9</div>
+                    <div class="score__reviews"><h6>2016 reviews</h6></div>
+                  </div>
+                </div>
+                <div class="hostel__person">
+                  <div class="person__icon">
+                    <img src="src/img/person.png" alt="person" />
+                  </div>
+                  <div class="person__data">
+                    <div class="person__name">
+                      <h4>Adam Smith</h4>
+                    </div>
+                    <div class="person__location">
+                      <div class="location__icon">
+                        <img src="src/img/usa.png" alt="location" />
+                      </div>
+                      <div class="location__name">
+                        <h4>USA</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hostel__review">
+                  <h4>
+                    I've been in this hostel for a month and here is the best hostel of all. Excellent management of excellent and ethical staff and
+                    bedrooms Bathrooms are always clean and excellent. Most importantly, those who work here are kind and good__natured.
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="hostel__item">
+              <div class="hostel__price">
+                <img class="hostel__img" src="src/img/hostel3.png" />
+                <div class="price">
+                  <h4>From <span>100 USD</span></h4>
+                </div>
+              </div>
+              <div class="hostel__info">
+                <div class="hostel__about">
+                  <div class="about__text">
+                    <div class="about__name"><h4>Rokoko Hotel</h4></div>
+                    <div class="about__location"><h4>Ourika, Marocco</h4></div>
+                  </div>
+                  <div class="about__score">
+                    <div class="score__star">9,1</div>
+                    <div class="score__reviews"><h6>815 reviews</h6></div>
+                  </div>
+                </div>
+                <div class="hostel__person">
+                  <div class="person__icon">
+                    <img src="src/img/person.png" alt="person" />
+                  </div>
+                  <div class="person__data">
+                    <div class="person__name">
+                      <h4>Anika Messer</h4>
+                    </div>
+                    <div class="person__location">
+                      <div class="location__icon">
+                        <img src="src/img/germany.png" alt="location" />
+                      </div>
+                      <div class="location__name">
+                        <h4>Germany</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hostel__review">
+                  <h4>
+                    Efficient, friendly, professional, and appropriately attentive. Great hotel in a great location. Easy access to all the
+                    surrounding historical sites. Staff is fantastic. Will definitely stay at this location during my next stay in Marocco.
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pagination">
+            <div class="circle circle__black"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="signup__block__mobile">
+        <div class="container">
+          <div class="signup__mobile">
+            <div class="close__mobile">
+              <img src="src/img/close.png" alt="close" />
+            </div>
+            <div class="signup__mobile__logo">
+              <img src="/src/img/logo_white_mini.svg" alt="logo" />
+            </div>
+            <div class="signup__mobile__text">
+              <h6>
+                Sign up in the app and get 20%<br />
+                off your first booking
+              </h6>
+            </div>
+            <div class="signup__mobile__btn">
+              <h3>Install</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer">
+        <div class="container">
+          <div class="footer__items">
+            <div class="footer__item">
+              <div class="footer__title">
+                <h3>About</h3>
+              </div>
+              <div class="footer__text">
+                <a href="#"><h3 class="a">How Triphouse works</h3></a>
+              </div>
+              <div class="footer__text">
+                <a href="#"><h3 class="a">Careers</h3></a>
+              </div>
+              <div class="footer__text">
+                <a href="#"><h3 class="a">Privacy</h3></a>
+              </div>
+              <div class="footer__text">
+                <a href="#"><h3 class="a">Terms</h3></a>
+              </div>
+            </div>
+            <div class="footer__item">
+              <div class="footer__title">
+                <h3>Property types</h3>
+              </div>
+              <div class="footer__text">
+                <a href="#"><h3 class="a">Guest houses</h3></a>
+              </div>
+              <div class="footer__text">
+                <a href="#"><h3 class="a">Hotels</h3></a>
+              </div>
+              <div class="footer__text">
+                <a href="#"><h3 class="a">Apartments</h3></a>
+              </div>
+              <div class="footer__text">
+                <a href="#"><h3 class="a">Villas</h3></a>
+              </div>
+              <div class="footer__text">
+                <a href="#"><h3 class="a">Holiday homes</h3></a>
+              </div>
+              <div class="footer__text">
+                <a href="#"><h3 class="a">Hostels</h3></a>
+              </div>
+            </div>
+            <div class="footer__item">
+              <div class="footer__title">
+                <h3>Support</h3>
+              </div>
+              <div class="footer__text">
+                <a href="#"><h3 class="a">Contact Customer Service</h3></a>
+              </div>
+              <div class="footer__text">
+                <a href="#"><h3 class="a">FAQ</h3></a>
+              </div>
+            </div>
+          </div>
+          <div class="copyright">
+            <h6>© 2022Triphouse, Inc. All rights reserved</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__mobile">
+        <img src="src/img/logo_white.png" alt="logo" />
+        <div class="footer__mobile__items">
+          <div class="footer__mobile__item">
+            <h4>About</h4>
+          </div>
+          <div class="footer__mobile__item">
+            <h4>Property types</h4>
+          </div>
+          <div class="footer__mobile__item">
+            <h4>Support</h4>
+          </div>
+        </div>
+        <div class="copyright">
+          <h6>© 2022Triphouse, Inc. All rights reserved</h6>
+        </div>
+      </div>
+    </footer>
+
+    <script src="src/js/jquery-3.6.0.min.js"></script>
+    <script src="src/js/swiper-bundle.min.js"></script>
+    <!-- <script type="module" src="src/js/people-info.js"></script> -->
+    <!-- <script type="module" src="src/js/calendar.js"></script> -->
+    <script type="module" src="src/js/dataCalendar.js"></script>
+    <script type="module" src="src/js/sliders.js"></script>
+    <script type="module" src="src/js/main.js"></script>
+  </body>
 </html>
