@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TripHouse - Sign In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- for mobile -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__nav">
+        <a href='index.html' class="logo">
+          <img src="src/img/logo.svg" alt="logo" />
+        </a>
+        <ul class="nav__items">
+          <li class="nav__item">
+            <a href="#"><h2 class="selected__text">Stays</h2></a>
+          </li>
+          <li class="nav__item">
+            <a href="#"><h2>Attractions</h2></a>
+          </li>
+          <li class="nav__item"><img src="src/img/night.svg" alt="day/night" /></li>
+          <li class="nav__item"><img src="src/img/account2.svg" alt="account" /></li>
+          <li class="nav__item"><img src="src/img/menu.svg" alt="menu" /></li>
+        </ul>
+      </div>
+      <div class="container">
+        <div class="header__page-center">
+          <div class="sign-in">
+            <div class="sign-in__title">Sign in</div>
+            <form action="" class="sign-in__form">
+              <div class="sign-in__label">
+                <div class="sign-in__text">Email address</div>
+                <input type='email' class="sign-in__input"></input>
+              </div>
+              <div class="sign-in__label">
+                <div class="sign-in__text">Password</div>
+                <input type='password' class="sign-in__input"></input>
+              </div>
+              <div class="sign-in__search__btn">
+                <input type="button" value="Sign In" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script type="module" src="src/js/main.js"></script>
+  </body>
+</html>

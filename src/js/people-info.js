@@ -59,11 +59,13 @@ lessPeopleEl.forEach((elem) => {
         elem.nextElementSibling.nextElementSibling.querySelector("path").setAttribute("fill", "#3077C6");
 
         elem.nextElementSibling.innerHTML = --count;
-        if (elem.contains(childrenLess) && elem.nextElementSibling.innerHTML <= 0) {
-          childrenAge.removeChild(childrenAge.lastElementChild);
-          childrenAge.classList.add("hidden");
-        } else {
-          childrenAge.removeChild(childrenAge.lastElementChild);
+        if (elem.contains(childrenLess)) {
+          if (elem.nextElementSibling.innerHTML <= 0) {
+            childrenAge.removeChild(childrenAge.lastElementChild);
+            childrenAge.classList.add("hidden");
+          } else {
+            childrenAge.removeChild(childrenAge.lastElementChild);
+          }
         }
 
         elem.querySelector("rect").setAttribute("stroke", "#3077C6");
@@ -94,9 +96,7 @@ morePeopleEl.forEach((elem) => {
         elem.previousElementSibling.innerHTML = ++count;
         if (elem.contains(childrenMore) && elem.previousElementSibling.innerHTML >= 1) {
           childrenAge.classList.remove("hidden");
-          if (elem.previousElementSibling.innerHTML >= 1) {
-            childrenAge.insertAdjacentHTML("beforeend", selectChildrenEl);
-          }
+          childrenAge.insertAdjacentHTML("beforeend", selectChildrenEl);
         }
 
         elem.querySelector("rect").setAttribute("stroke", "#3077C6");

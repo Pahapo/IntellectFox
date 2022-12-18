@@ -823,6 +823,62 @@ input::placeholder {
   margin-top: 64px;
 }
 
+/* page Sign In */
+
+.header__page-center {
+  display: flex;
+  justify-content: center;
+}
+
+.sign-in {
+  width: 400px;
+  background-color: #fff;
+  border: 1px solid #cecece;
+  border-radius: 4px;
+  padding: 36px 40px;
+}
+.sign-in__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+
+  color: #000000;
+}
+.sign-in__form {
+  margin-top: 23px;
+}
+
+.sign-in__label:first-child {
+  margin-bottom: 16px;
+}
+
+.sign-in__text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 8px;
+
+  color: #333333;
+}
+
+.sign-in__input {
+  width: 100%;
+  background: #ffffff;
+  border: 2px solid #cecece;
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+
+.sign-in__search__btn input {
+  width: 100%;
+  color: #fff;
+  background-color: #3077c6;
+  border-radius: 8px;
+  margin-top: 24px;
+  padding: 12px 0;
+}
+
 /* For mobile */
 
 @media (max-width: 450px) {
