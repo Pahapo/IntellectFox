@@ -279,6 +279,7 @@ input::placeholder {
   background-color: #fff;
   box-shadow: 10px 5px 20px 0 #0006;
   border-radius: 4px;
+  z-index: 100;
 }
 
 .btn-calendar__prev,
@@ -365,9 +366,12 @@ input::placeholder {
   right: 17%;
   top: 80px;
 
+  width: 260px;
   background-color: #fff;
   border-radius: 4px;
   padding: 17px 22px;
+  box-shadow: 10px 5px 20px 0 #0006;
+  z-index: 100;
 }
 
 .count__people__items {
@@ -387,6 +391,29 @@ input::placeholder {
   justify-content: space-between;
   margin-left: 48px;
   width: 100px;
+}
+
+.child__age {
+  margin-top: 24px;
+}
+
+.child__age p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 14px;
+  color: #333333;
+}
+
+.child__age select {
+  margin-top: 12px;
+  width: 99px;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid #3077c6;
+  outline: none;
+  color: #333333;
+  display: block;
 }
 
 .page__adv {
@@ -545,7 +572,7 @@ input::placeholder {
 
 .homes .btn__next {
   right: -105px;
-  top: -275px;
+  top: -295px; /* -275px */
 }
 
 .hostel .btn__prev {
@@ -794,6 +821,62 @@ input::placeholder {
 .copyright h6 {
   color: #fff;
   margin-top: 64px;
+}
+
+/* page Sign In */
+
+.header__page-center {
+  display: flex;
+  justify-content: center;
+}
+
+.sign-in {
+  width: 400px;
+  background-color: #fff;
+  border: 1px solid #cecece;
+  border-radius: 4px;
+  padding: 36px 40px;
+}
+.sign-in__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+
+  color: #000000;
+}
+.sign-in__form {
+  margin-top: 23px;
+}
+
+.sign-in__label:first-child {
+  margin-bottom: 16px;
+}
+
+.sign-in__text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 8px;
+
+  color: #333333;
+}
+
+.sign-in__input {
+  width: 100%;
+  background: #ffffff;
+  border: 2px solid #cecece;
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+
+.sign-in__search__btn input {
+  width: 100%;
+  color: #fff;
+  background-color: #3077c6;
+  border-radius: 8px;
+  margin-top: 24px;
+  padding: 12px 0;
 }
 
 /* For mobile */

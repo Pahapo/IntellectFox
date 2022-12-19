@@ -17,9 +17,9 @@
   <body>
     <header class="header">
       <div class="header__nav">
-        <div class="logo">
+        <a href="#" class="logo">
           <img src="src/img/logo.svg" alt="logo" />
-        </div>
+        </a>
         <ul class="nav__items">
           <li class="nav__item">
             <a href="#"><h2 class="selected__text">Stays</h2></a>
@@ -28,7 +28,7 @@
             <a href="#"><h2>Attractions</h2></a>
           </li>
           <li class="nav__item"><img src="src/img/night.svg" alt="day/night" /></li>
-          <li class="nav__item"><img src="src/img/account.svg" alt="account" /></li>
+          <a href="signin.html" class="nav__item"><img src="src/img/account.svg" alt="account" /></a>
           <li class="nav__item"><img src="src/img/menu.svg" alt="menu" /></li>
         </ul>
       </div>
@@ -83,12 +83,26 @@
                   <div class="count__people__item">
                     <p>Children</p>
                     <div class="count__people__block">
-                      <svg class="less-people" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg
+                        class="less-people children-less-js"
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
                         <rect x="0.5" y="0.5" width="29" height="29" fill="white" stroke="#CECECE" />
                         <path d="M19.3242 16.2783H10.5176V14.9512H19.3242V16.2783Z" fill="#CECECE" />
                       </svg>
                       <p id="count__people">0</p>
-                      <svg class="more-people" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg
+                        class="more-people children-more-js"
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
                         <rect x="0.5" y="0.5" width="29" height="29" fill="white" stroke="#3077C6" />
                         <path
                           d="M16.2822 15.1357H19.8506V16.6738H16.2822V20.7168H14.6475V16.6738H11.0791V15.1357H14.6475V11.4004H16.2822V15.1357Z"
@@ -114,6 +128,9 @@
                       </svg>
                     </div>
                   </div>
+                </div>
+                <div class="child__age hidden">
+                  <p>What is the age of the child you’re travelling with?</p>
                 </div>
               </div>
             </div>
@@ -165,7 +182,7 @@
             <img src="src/img/app_store.png" alt="app_store" />
           </div>
           <div class="arrow__down">
-            <img src="src/img/arrow-right-down.png" />
+            <img src="src/img/arrow-down.png" />
           </div>
         </div>
       </div>
@@ -573,8 +590,6 @@
 
     <script src="src/js/jquery-3.6.0.min.js"></script>
     <script src="src/js/swiper-bundle.min.js"></script>
-    <!-- <script type="module" src="src/js/people-info.js"></script> -->
-    <!-- <script type="module" src="src/js/calendar.js"></script> -->
     <script type="module" src="src/js/dataCalendar.js"></script>
     <script type="module" src="src/js/sliders.js"></script>
     <script type="module" src="src/js/main.js"></script>

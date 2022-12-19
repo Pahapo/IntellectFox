@@ -1,5 +1,5 @@
 import { calendar, getYear, getMonth } from "../js/dataCalendar.js";
-// import { peopleInfoEl } from "../js/people-info.js";
+import { peopleInfoEl } from "../js/people-info.js";
 
 // const dataCalendar = document.querySelector(".calendar__days");
 const blockTravelEl = document.getElementById("travel-info__input");
@@ -7,7 +7,7 @@ export const calendarBlockEl = document.querySelector(".calendar__block");
 
 blockTravelEl.addEventListener("focus", () => {
   calendarBlockEl.classList.remove("hidden");
-  // peopleInfoEl.classList.add("hidden");
+  peopleInfoEl.classList.add("hidden");
 });
 
 // calendarBlockEl.addEventListener("mouseover", () => {

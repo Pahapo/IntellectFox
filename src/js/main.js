@@ -1,5 +1,5 @@
 import { calendarBlockEl } from "../js/calendar.js";
-// import { peopleInfoEl } from "../js/people-info.js";
+import { peopleInfoEl } from "../js/people-info.js";
 
 /* close ADV */
 const closeEl = document.querySelector(".close");
@@ -16,25 +16,29 @@ const blockCountryEl = document.querySelector(".country-info__input");
 
 blockCountryEl.addEventListener("focus", () => {
   calendarBlockEl.classList.add("hidden");
-  // peopleInfoEl.classList.add("hidden");
+  peopleInfoEl.classList.add("hidden");
 });
 
 /* fetch API */
+/* Home guests loves*/
 const cards = document.querySelector(".homes__items");
 
-fetch("https://if-student-api.onrender.com/api/hotels/popular", {
-  method: "GET",
-})
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error(`${response.status} - ${response.statusText}`);
-    }
-    return response.json();
+if (sessionStorage.getItem("cards")) {
+  cards.insertAdjacentHTML("afterbegin", sessionStorage.getItem("cards"));
+} else {
+  fetch("https://if-student-api.onrender.com/api/hotels/popular", {
+    method: "GET",
   })
-  .then((data) => {
-    const cardItems = data
-      .map(({ name, city, country, imageUrl }) => {
-        return `<div class="homes__item swiper-slide">
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`${response.status} - ${response.statusText}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      const cardItems = data
+        .map(({ name, city, country, imageUrl }) => {
+          return `<div class="homes__item swiper-slide">
       <img class="homes__img" src="${imageUrl}" />
       <div class="homes__text">
         <h2>${name}</h2>
@@ -43,13 +47,16 @@ fetch("https://if-student-api.onrender.com/api/hotels/popular", {
         <h2>${city}, ${country}</h2>
       </div>
     </div>`;
-      })
-      .join("");
-    cards.insertAdjacentHTML("afterbegin", cardItems);
-  })
-  .catch((err) => console.error(err));
+        })
+        .join("");
+      cards.insertAdjacentHTML("afterbegin", cardItems);
 
-/* Отправка запроса по destination or hotel name */
+      sessionStorage.setItem("cards", cardItems);
+    })
+    .catch((err) => console.error(err));
+}
+
+/* Destination or hotel name */
 const AvHotels = document.querySelector(".av-hotels__items");
 const btnSearch1 = document.getElementById("search__btn1");
 const btnSearch2 = document.getElementById("search__btn2");
@@ -57,6 +64,9 @@ const btnSearch2 = document.getElementById("search__btn2");
 const url = new URL("https://if-student-api.onrender.com/api/hotels");
 
 const viewBlockAvHottels = () => {
+  calendarBlockEl.classList.add("hidden");
+  peopleInfoEl.classList.add("hidden");
+
   document.querySelector(".av-hotels").style.display = "block";
   document.querySelector(".arrow__down").style.display = "block";
   const value1 = document.querySelectorAll(".country-info__input")[0].value;
